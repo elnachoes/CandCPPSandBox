@@ -1,19 +1,8 @@
 //including the standard input and output header file
-#include <stdio.h>
-// #include <stdlib.h>
 
-#include <time.h>
-#include <math.h>
-
-//defining true and false for boolean variables
-#define false 0
-#define true 1
+#include "FastPrimeTestHead.h"
 
 #define primesBuffer 100000
-
-//prototype for the checkIfPrime Function
-_Bool checkIfPrimeCandidate(int currentNumber, int *array);
-_Bool checkIfPrime (unsigned int);
 
 //Main Function
 int main (void)
@@ -90,38 +79,10 @@ int main (void)
 
     printf("\nthe %i position prime number is %i\n",targetNthPrime, targetPrime);
     printf("\nthis took %f seconds\n",difftime(finishTime,startTime));
+    printf("press enter to close...");
+    getch();
+
 
     return 0;
 }
 
-_Bool checkIfPrimeCandidate(int currentNumber, int *array)
-{
-    int *i = array;
-
-    for(int j = 0; j != 0; j++)
-    {
-        if(j % *i == 0)
-        {
-            return false;
-        }
-    }
-    return true;
-    // return false;
-}
-
-
-//Function that checks if the number you entered is prime or not
-_Bool checkIfPrime (unsigned int number)
-{
-    for(unsigned int divisor = 3; divisor <= sqrt(number); divisor++)
-    {
-
-        //If this is true the number is not prime and the function returns false
-        if (number % divisor == 0)
-        {
-            return false;
-        }
-
-    }
-    return true;
-}
