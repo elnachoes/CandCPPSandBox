@@ -1,7 +1,7 @@
 //including the standard input and output header file
 #include <stdio.h>
-#include <stdlib.h>
-// #include <string.h>
+// #include <stdlib.h>
+
 #include <time.h>
 #include <math.h>
 
@@ -16,23 +16,20 @@ _Bool checkIfPrimeCandidate(int currentNumber, int *array);
 _Bool checkIfPrime (unsigned int);
 
 //Main Function
-int main (void) 
+int main (void)
 {
     int knownPrimes[primesBuffer];
 
-    // knownPrimes = (int *)malloc(primesBuffer);
-
-    // memset(knownPrimes,0,primesBuffer);
-
-    //two variables for tracking the target prime number and its position
     unsigned int targetNthPrime;
     unsigned int targetPrime;
+    time_t startTime, finishTime;
 
     //Getting user input to find the prime number of the position given
     printf("\nenter a number to find the nth position prime number : ");
     scanf("%i",&targetNthPrime);
     printf("\nplease wait while the %i position prime number is calculated...\n", targetNthPrime);
-    unsigned int timeStarted = time(0); 
+
+    startTime = time(NULL);
 
     //this if statement executes if the user enters a 1 because 2 is the only even prime
     if (targetNthPrime == 1)
@@ -45,7 +42,7 @@ int main (void)
     //This is much faster at finding the target prime than incrementing by 1 which includes even numbers
     else
     {
-        //Variables for tracking the current itteration of the while loop and the current number 
+        //Variables for tracking the current itteration of the while loop and the current number
         unsigned int currentNumber = 3;
         unsigned int i = 1;
 
@@ -56,7 +53,7 @@ int main (void)
         int knownPrimesPosition = 1;
         knownPrimes[knownPrimesPosition] = currentNumber;
 
-        while (i < targetNthPrime) 
+        while (i < targetNthPrime)
         {
 
             isPrimeCandidate = checkIfPrimeCandidate(currentNumber, knownPrimes);
@@ -69,16 +66,16 @@ int main (void)
                 continue;
             }
 
-            isPrime = checkIfPrime (currentNumber); 
-            
-            if (isPrime) 
+            isPrime = checkIfPrime (currentNumber);
+
+            if (isPrime)
             {
                 i++;
                 targetPrime = currentNumber;
                 if(knownPrimesPosition < primesBuffer)
                 {
-                knownPrimesPosition++;
-                knownPrimes[knownPrimesPosition] = currentNumber;
+                    knownPrimesPosition++;
+                    knownPrimes[knownPrimesPosition] = currentNumber;
                 }
             }
             currentNumber += 2;
@@ -88,10 +85,11 @@ int main (void)
     }
 
     //Printing to the user the prime number they requested
-    unsigned int timeFinished = time(0);
-    long double secondsElapsed = ((double)timeFinished - (double)timeStarted);
+
+    finishTime = time(NULL);
+
     printf("\nthe %i position prime number is %i\n",targetNthPrime, targetPrime);
-    printf("\nthis took %f seconds\n",secondsElapsed);
+    printf("\nthis took %f seconds\n",difftime(finishTime,startTime));
 
     return 0;
 }
@@ -113,11 +111,11 @@ _Bool checkIfPrimeCandidate(int currentNumber, int *array)
 
 
 //Function that checks if the number you entered is prime or not
-_Bool checkIfPrime (unsigned int number) 
+_Bool checkIfPrime (unsigned int number)
 {
     for(unsigned int divisor = 3; divisor <= sqrt(number); divisor++)
     {
-        
+
         //If this is true the number is not prime and the function returns false
         if (number % divisor == 0)
         {
