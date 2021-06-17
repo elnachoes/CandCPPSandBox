@@ -9,3 +9,5 @@
 _Bool checkIfPrimeCandidate(int currentNumber, int *array);
 _Bool checkIfPrime (unsigned int);
 
+void cachePrimesArray(int knownPrimes[]);
+int * loadPrimes();

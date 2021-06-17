@@ -78,11 +78,17 @@ int main (void)
     finishTime = time(NULL);
 
     printf("\nthe %i position prime number is %i\n",targetNthPrime, targetPrime);
-    printf("\nthis took %f seconds\n",difftime(finishTime,startTime));
+    printf("\ncalculation time : %.2f seconds\n",difftime(finishTime,startTime));
     printf("press enter to close...");
+
+
+    cachePrimesArray(knownPrimes);
+
+
     getch();
 
 
     return 0;
+
 }
 
