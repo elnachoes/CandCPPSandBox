@@ -6,7 +6,8 @@
 #define false 0
 #define true 1
 
-_Bool checkIfPrimeCandidate(int currentNumber, int *array);
+#define primesBuffer 100000
+
 _Bool checkIfPrime (unsigned int);
 
 void cachePrimesArray(int knownPrimes[]);

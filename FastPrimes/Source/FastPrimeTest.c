@@ -1,13 +1,11 @@
 //including the standard input and output header file
-
 #include "FastPrimeTestHead.h"
 
-#define primesBuffer 100000
-
 //Main Function
-int main (void)
+int main(void)
 {
     int knownPrimes[primesBuffer];
+    knownPrimes[0] = 2;
 
     unsigned int targetNthPrime;
     unsigned int targetPrime;
@@ -39,21 +37,10 @@ int main (void)
         _Bool isPrimeCandidate;
         _Bool isPrime;
 
-        int knownPrimesPosition = 1;
-        knownPrimes[knownPrimesPosition] = currentNumber;
+        int knownPrimesPosition;
 
         while (i < targetNthPrime)
         {
-
-            isPrimeCandidate = checkIfPrimeCandidate(currentNumber, knownPrimes);
-
-            if(!isPrimeCandidate)
-            {
-                i++;
-                targetPrime = currentNumber;
-                currentNumber += 2;
-                continue;
-            }
 
             isPrime = checkIfPrime (currentNumber);
 
@@ -63,13 +50,12 @@ int main (void)
                 targetPrime = currentNumber;
                 if(knownPrimesPosition < primesBuffer)
                 {
-                    knownPrimesPosition++;
                     knownPrimes[knownPrimesPosition] = currentNumber;
+                    knownPrimesPosition++;
                 }
             }
-            currentNumber += 2;
-
             //Incrementing by two skips all even numbers since currentNumber starts at 3
+            currentNumber += 2;
         }
     }
 
@@ -81,12 +67,9 @@ int main (void)
     printf("\ncalculation time : %.2f seconds\n",difftime(finishTime,startTime));
     printf("press enter to close...");
 
-
     cachePrimesArray(knownPrimes);
 
-
-    getch();
-
+    // getch();
 
     return 0;
 
