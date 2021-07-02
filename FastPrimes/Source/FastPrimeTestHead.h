@@ -8,6 +8,7 @@
 
 #define primesBuffer 100000
 
+int calculationLoop(int targetNthPrime);
 _Bool checkIfPrime (unsigned int);
 
 void cachePrimesArray(int knownPrimes[]);
