@@ -1,0 +1,9 @@
+﻿  CachedPrimesManager.c
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\FastPrimes\source\CachedPrimesManager.c(5,19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Main.c
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\FastPrimes\source\Main.c(13,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  PrimeNumberFunctions.c
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\FastPrimes\source\PrimeNumberFunctions.c(31,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\FastPrimes\source\PrimeNumberFunctions.c(26,15): warning C4101: 'isPrimeCandidate': unreferenced local variable
+  Generating Code...
+  FastPrimes.vcxproj -> C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\FastPrimes\Debug\FastPrimes.exe

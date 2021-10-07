@@ -1,11 +1,11 @@
-#include <stdi.h>
+#include <stdio.h>
 
 int main(void){
     //costs of items per item and lb of item
     const double costOfOrangesPerLb = 0.95;
     const double costOfEnergyDrinks = 1.50;
     const double costOfYogurts = 0.75;
-    
+
     //The tax percentage for energy drinks and yogurts
     const double specialTaxPercentage = 0.065;
 
@@ -17,7 +17,7 @@ int main(void){
     //stores taxes on items being checked out
     double energyDrinksTax;
     double yogurtsTax;
- 
+
     //stores totals on items being checked out
     double totalLbsOranges;
     double totalEnergyDrinks;
@@ -34,7 +34,7 @@ int main(void){
     scanf("%i", &energyDrinks);
     printf("\nHow many yogurts do you have? : ");
     scanf("%i", &yogurts);
-    
+
     //calculates totals for items in cart
     totalLbsOranges = lbsOranges * costOfOrangesPerLb;
     totalYogurts = yogurts * costOfYogurts;
@@ -49,7 +49,7 @@ int main(void){
     itemTotal = totalLbsOranges + totalEnergyDrinks + totalYogurts;
     grandTotal = salesTaxTotal + itemTotal;
 
-    //prints out the receipt 
+    //prints out the receipt
     printf("\nItem\t\tCost\tTax");
     printf("\nOranges\t\t%3.2f",totalLbsOranges);
     printf("\nEnergy Drinks\t%3.2f\t%3.2f",totalEnergyDrinks,energyDrinksTax);

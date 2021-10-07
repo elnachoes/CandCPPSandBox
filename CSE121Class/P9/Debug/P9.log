@@ -1,0 +1,9 @@
+﻿  createList.c
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\CSE121Class\P9\createList.c(14,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\CSE121Class\P9\createList.c(21,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\CSE121Class\P9\createList.c(23,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  main.c
+  p9.c
+  releaseMemory.c
+  Generating Code...
+  P9.vcxproj -> C:\Users\corbin\Desktop\programming\Cstuffs\CandCPPSandBox\CSE121Class\P9\Debug\P9.exe

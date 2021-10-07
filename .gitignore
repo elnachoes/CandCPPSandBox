@@ -69,3 +69,8 @@ FastPrimes/.vscode/fastPrimeTest.exe
 FastPrimes/.vscode/settings.json
 FastPrimes/.vscode/tasks.exe
 FastPrimes/.vscode/PrimesCache.bin
+.vs/slnx.sqlite
+.vs/CandCPPSandBox/v16/Browse.VC.db
+.vs/CandCPPSandBox/v16/Browse.VC.db-shm
+.vs/CandCPPSandBox/v16/Browse.VC.db-wal
+.vs/CandCPPSandBox/v16/Browse.VC.opendb

@@ -17,7 +17,7 @@ int main (void)
 
     //Getting user input to find the prime number of the position given
     printf("\nenter a number to find the nth position prime number : ");
-    scanf("%i",&targetNthPrime);
+    scanf_s("%i",&targetNthPrime);
     printf("\nplease wait while the %i position prime number is calculated...\n", targetNthPrime);
 
     //this if statement executes if the user enters a 1 because 2 is the only even prime
